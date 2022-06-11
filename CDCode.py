@@ -54,30 +54,10 @@ class UI(QMainWindow):
                     for column, stuff in enumerate(row_data):
                         item=QTableWidgetItem(stuff)
                         self.QTable.setItem(row, column, item)
-                        #self.QTable.rowCount() = row +1
-
-        #self.all_data = pd.read_csv(path[0])
-
-        #numColumns = 3
-        #self.QTable.setColumnCount(len(self.all_data.columns))
-
-       # numRows=numColumns
-        # numRows = self.QTable.setRowCount(len(self.all_data.rows))
-        #self.QTable.setColumnCount(len(self.all_data.columns))
-        #self.QTable.setRowCount(numRows)
-        #self.QTable.setHorizontalHeaderLabels(self.all_data.columns)
-        #for i in range(numRows):
-        #    for j in range(len(self.all_data.columns)):
-         #       self.QTable.setItem(i,j,QTableWidgetItem(str(self.all_data.iat[i,j])))
-
-        #self.QTable.resizeColumnsToContents()
+                      
 
     def clicker(self):
         self.pushButton.setText("Pressed")
-    
-    # load data in 
-    # def loadData(self):
-
     
 # initialize the app
 
