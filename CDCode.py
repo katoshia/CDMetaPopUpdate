@@ -21,23 +21,25 @@ class UI(QMainWindow):
         # show the app
 
         # define our widgets
+        # empty table
         self.QTable = self.findChild(QTableWidget, "tableWidget")
-        self.QTable1 = self.findChild(QTableWidget, "mainTable")
+        #preset table
+        self.QTableOne = self.findChild(QTableWidget, "mainTable")
         self.pushButton = self.findChild(QPushButton, "pushButton")
         self.tryButton = self.findChild(QPushButton, "tryButton")
 
         # do something
 
         # self.pushButton.clicked.connect(self.clicker)
-        self.pushButton.clicked.connect(self.openFile)
-        self.tryButton.clicked.connect(self.openFile)
+        self.pushButton.clicked.connect(self.openFileOne)
+        self.tryButton.clicked.connect(self.openFileTwo)
 
         # Show the app
         self.show()
 
   
     # tried below
-    def openFile(self):
+    def openFileOne(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
         if path[0] != "":
             with open(path[0], newline='\n') as csv_file:
@@ -54,8 +56,26 @@ class UI(QMainWindow):
                     for column, stuff in enumerate(row_data):
                         item=QTableWidgetItem(stuff)
                         self.QTable.setItem(row, column, item)
-                      
 
+    def openFileTwo(self):
+        path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
+        if path[0] != "":
+            with open(path[0], newline='\n') as csv_file:
+                self.QTableOne.setRowCount(0)
+                #self.QTable.setRowCount(len(csv_file))
+                self.QTableOne.setColumnCount(10)
+                my_file=csv.reader(csv_file, delimiter=',', quotechar='|')
+                for row_data in my_file:
+                    row=self.QTableOne.rowCount()
+                    self.QTableOne.insertRow(row)
+                    
+                    if len(row_data)>10:
+                        self.QTableOne.setColumnCount(len(row_data))
+                    for column, stuff in enumerate(row_data):
+                        item=QTableWidgetItem(stuff)
+                        self.QTableOne.setItem(row, column, item)
+
+    # practice for click event
     def clicker(self):
         self.pushButton.setText("Pressed")
     
