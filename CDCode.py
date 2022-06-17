@@ -22,55 +22,54 @@ class UI(QMainWindow):
 
         # define our widgets
         # empty table
-        self.QTable = self.findChild(QTableWidget, "tableWidget")
+        self.InputTable = self.findChild(QTableWidget, "InputTable")
         #preset table
-        self.QTableOne = self.findChild(QTableWidget, "mainTable")
+        self.QTableOne = self.findChild(QTableWidget, "OutputTable")
         self.pushButton = self.findChild(QPushButton, "pushButton")
         self.tryButton = self.findChild(QPushButton, "tryButton")
-
         # do something
 
         # self.pushButton.clicked.connect(self.clicker)
-        self.pushButton.clicked.connect(self.openFileOne)
-        self.tryButton.clicked.connect(self.openFileTwo)
+        self.pushButton.clicked.connect(self.openImportFile)
+        #self.tryButton.clicked.connect(self.openFileTwo)
 
         # Show the app
         self.show()
 
   
     # tried below
-    def openFileOne(self):
+    def openImportFile(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
         if path[0] != "":
             with open(path[0], newline='\n') as csv_file:
-                self.QTable.setRowCount(0)
-                #self.QTable.setRowCount(len(csv_file))
-                self.QTable.setColumnCount(10)
+                self.InputTable.setRowCount(0)
+                #self.InputTable.setRowCount(len(csv_file))
+                self.InputTable.setColumnCount(10)
                 my_file=csv.reader(csv_file, delimiter=',', quotechar='|')
                 for row_data in my_file:
-                    row=self.QTable.rowCount()
-                    self.QTable.insertRow(row)
+                    row=self.InputTable.rowCount()
+                    self.InputTable.insertRow(row)
                     
                     if len(row_data)>10:
-                        self.QTable.setColumnCount(len(row_data))
+                        self.InputTable.setColumnCount(len(row_data))
                     for column, stuff in enumerate(row_data):
                         item=QTableWidgetItem(stuff)
-                        self.QTable.setItem(row, column, item)
-
+                        self.InputTable.setItem(row, column, item)
+        # will need an empty table not a preset one - use preset one for input into program versus import
     def openFileTwo(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
         if path[0] != "":
             with open(path[0], newline='\n') as csv_file:
-                self.QTableOne.setRowCount(0)
-                #self.QTable.setRowCount(len(csv_file))
-                self.QTableOne.setColumnCount(10)
+                #self.QTableOne.setRowCount(0)
+                #self.InputTable.setRowCount(len(csv_file))
+                #self.QTableOne.setColumnCount(10)
                 my_file=csv.reader(csv_file, delimiter=',', quotechar='|')
                 for row_data in my_file:
-                    row=self.QTableOne.rowCount()
-                    self.QTableOne.insertRow(row)
+                    #row=self.QTableOne.rowCount()
+                    #self.QTableOne.insertRow(row)x
                     
-                    if len(row_data)>10:
-                        self.QTableOne.setColumnCount(len(row_data))
+                    #if len(row_data)>10:
+                     #   self.QTableOne.setColumnCount(len(row_data))
                     for column, stuff in enumerate(row_data):
                         item=QTableWidgetItem(stuff)
                         self.QTableOne.setItem(row, column, item)
