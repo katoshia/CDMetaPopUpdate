@@ -31,13 +31,13 @@ class UI(QMainWindow):
 
         # self.pushButton.clicked.connect(self.clicker)
         self.pushButton.clicked.connect(self.openImportFile)
-        #self.tryButton.clicked.connect(self.openFileTwo)
+        #self.tryButton.clicked.connect(self.openOutputFile)
 
         # Show the app
         self.show()
 
   
-    # tried below - NEEDS CORRECTING FOR COLUMN HEADERS. -
+    # tried below - NEEDS CORRECTING FOR COLUMN HEADERS. - CORRECTED
     def openImportFile(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
         if path[0] != "":
@@ -49,9 +49,6 @@ class UI(QMainWindow):
                 for row_data in my_file:
                     row=self.InputTable.rowCount()
                     self.InputTable.insertRow(row)
-#                    column = self.InputTable.columnCount()
- #                   self.InputTable.insertColumn(column)
-                    #self.InputTable.columnCount()+1 
                     
                     if len(row_data)> self.InputTable.columnCount():
                         self.InputTable.setColumnCount(len(row_data))
@@ -59,7 +56,9 @@ class UI(QMainWindow):
                         item=QTableWidgetItem(stuff)
                         self.InputTable.setItem(row, column, item)
         # will need an empty table not a preset one - use preset one for input into program versus import  -CORRECTED
-    def openFileTwo(self):
+
+        # open the output file into output table.
+    def openOutputFile(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
         if path[0] != "":
             with open(path[0], newline='\n') as csv_file:
