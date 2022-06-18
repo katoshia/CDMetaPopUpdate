@@ -37,25 +37,28 @@ class UI(QMainWindow):
         self.show()
 
   
-    # tried below
+    # tried below - NEEDS CORRECTING FOR COLUMN HEADERS. -
     def openImportFile(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
         if path[0] != "":
             with open(path[0], newline='\n') as csv_file:
                 self.InputTable.setRowCount(0)
-                #self.InputTable.setRowCount(len(csv_file))
-                self.InputTable.setColumnCount(10)
+                self.InputTable.setColumnCount(0)
                 my_file=csv.reader(csv_file, delimiter=',', quotechar='|')
+                
                 for row_data in my_file:
                     row=self.InputTable.rowCount()
                     self.InputTable.insertRow(row)
+#                    column = self.InputTable.columnCount()
+ #                   self.InputTable.insertColumn(column)
+                    #self.InputTable.columnCount()+1 
                     
-                    if len(row_data)>10:
+                    if len(row_data)> self.InputTable.columnCount():
                         self.InputTable.setColumnCount(len(row_data))
                     for column, stuff in enumerate(row_data):
                         item=QTableWidgetItem(stuff)
                         self.InputTable.setItem(row, column, item)
-        # will need an empty table not a preset one - use preset one for input into program versus import
+        # will need an empty table not a preset one - use preset one for input into program versus import  -CORRECTED
     def openFileTwo(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
         if path[0] != "":
