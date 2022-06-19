@@ -23,7 +23,8 @@ class UI(QMainWindow):
         # define our widgets
         # empty table
         self.InputTable = self.findChild(QTableWidget, "InputTable")
-        #preset table
+        self.InputTable.setRowCount(100)
+        self.InputTable.setColumnCount(100)
         self.QTableOne = self.findChild(QTableWidget, "OutputTable")
         self.pushButton = self.findChild(QPushButton, "pushButton")
         self.tryButton = self.findChild(QPushButton, "tryButton")
@@ -45,7 +46,6 @@ class UI(QMainWindow):
                 self.InputTable.setRowCount(0)
                 self.InputTable.setColumnCount(0)
                 my_file=csv.reader(csv_file, delimiter=',', quotechar='|')
-                
                 for row_data in my_file:
                     row=self.InputTable.rowCount()
                     self.InputTable.insertRow(row)
@@ -56,6 +56,8 @@ class UI(QMainWindow):
                         item=QTableWidgetItem(stuff)
                         self.InputTable.setItem(row, column, item)
         # will need an empty table not a preset one - use preset one for input into program versus import  -CORRECTED
+        # need an insert ot grow table size after import - refer to scrollwheel video 
+        # Need to allow user to change column and row names 
 
         # open the output file into output table.
     def openOutputFile(self):
