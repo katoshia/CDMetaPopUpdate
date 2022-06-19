@@ -1,6 +1,6 @@
 # doesn't need smpecific object names since QTWidgets is used.
 import fileinput
-from PyQt5.QtWidgets import QTableView, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget
+from PyQt5.QtWidgets import QTableView,QSpinBox, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget
 from PyQt5 import uic
 from PyQt5.uic import loadUiType
 from os.path import dirname, join
@@ -22,22 +22,37 @@ class UI(QMainWindow):
 
         # define our widgets
         # empty table
+        self.ResizeButton = self.findChild(QPushButton,"ResizeButton")
         self.InputTable = self.findChild(QTableWidget, "InputTable")
         self.InputTable.setRowCount(100)
         self.InputTable.setColumnCount(100)
+        self.ColumnValue=self.findChild(QSpinBox, "ColumnsSpinBox")
+        self.ColumnValue.setMaximum(1000000)
+        self.ColumnValue.setValue(100)
+        self.RowValue=self.findChild(QSpinBox, "RowsSpinBox")
+        self.RowValue.setMaximum(1000000)
+        self.RowValue.setValue(100)
         self.QTableOne = self.findChild(QTableWidget, "OutputTable")
-        self.pushButton = self.findChild(QPushButton, "pushButton")
+        self.importButton = self.findChild(QPushButton, "ImportCSVButton")
         self.tryButton = self.findChild(QPushButton, "tryButton")
-        # do something
+        # do something 
+        # self.importButton.clicked.connect(self.clicker)
 
-        # self.pushButton.clicked.connect(self.clicker)
-        self.pushButton.clicked.connect(self.openImportFile)
-        #self.tryButton.clicked.connect(self.openOutputFile)
+        # self.ResizeButton.clicked.connect(self.tableResize)
+        self.importButton.clicked.connect(self.openImportFile)
+        #self.tryButllton.clicked.connect(self.openOutputFile)
 
         # Show the app
         self.show()
 
-  
+    def tableResize(self):
+        numColumn=self.ColumnValue.value()
+        self.ColumnValue.setValue(numColumn)
+        self.InputTable.setColumnCount(numColumn)
+        numRows=self.RowValue.value()
+        self.RowValue.setValue(numRows)
+        self.InputTable.setRowCount(numRows)
+
     # tried below - NEEDS CORRECTING FOR COLUMN HEADERS. - CORRECTED
     def openImportFile(self):
         path =QFileDialog.getOpenFileName(self, 'Open CSV', os.getenv('HOME'), 'CSV(*.csv)')
@@ -80,7 +95,7 @@ class UI(QMainWindow):
 
     # practice for click event
     def clicker(self):
-        self.pushButton.setText("Pressed")
+        self.importButton.setText("Pressed")
     
 # initialize the app
 
