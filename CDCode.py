@@ -35,8 +35,14 @@ class UI(QMainWindow):
         self.QTableOne = self.findChild(QTableWidget, "OutputTable")
         self.importButton = self.findChild(QPushButton, "ImportCSVButton")
         self.tryButton = self.findChild(QPushButton, "tryButton")
-        # do something 
-        # self.importButton.clicked.connect(self.clicker)
+        self.EmigrationButton = self.findChild(QPushButton, "EmigrationButton")
+        self.ImmigrationButton = self.findChild(QPushButton, "ImmigrationButton")
+        self.MateButton = self.findChild(QPushButton, "MateButton")
+        self.ModulesButton = self.findChild(QPushButton, "ModuleButton")
+        self.MortalityButton = self.findChild(QPushButton, "MortalityButton")
+        self.OffSpringButton = self.findChild(QPushButton, "OffSpringButton")
+        self.PreProcessButton = self.findChild(QPushButton, "PreProcessButton")
+        self.PostProcessButton = self.findChild(QPushButton, "PostProcessButton")
 
         # self.ResizeButton.clicked.connect(self.tableResize)
         self.importButton.clicked.connect(self.openImportFile)
@@ -92,10 +98,6 @@ class UI(QMainWindow):
                     for column, stuff in enumerate(row_data):
                         item=QTableWidgetItem(stuff)
                         self.QTableOne.setItem(row, column, item)
-
-    # practice for click event
-    def clicker(self):
-        self.importButton.setText("Pressed")
     
 # initialize the app
 
