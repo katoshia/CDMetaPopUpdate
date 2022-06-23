@@ -1,4 +1,4 @@
-# doesn't need smpecific object names since QTWidgets is used.
+# imports for qtapplications and widegets
 import fileinput
 from PyQt5.QtWidgets import QTableView,QSpinBox, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget
 from PyQt5 import uic

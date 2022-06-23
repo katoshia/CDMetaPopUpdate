@@ -6,345 +6,540 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>803</width>
-    <height>600</height>
+    <width>1207</width>
+    <height>686</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>CDMetaPop</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="QTable">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>60</y>
-      <width>671</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <property name="mouseTracking">
-     <bool>false</bool>
-    </property>
-    <property name="sizeAdjustPolicy">
-     <enum>QAbstractScrollArea::AdjustIgnored</enum>
-    </property>
-    <property name="alternatingRowColors">
-     <bool>true</bool>
-    </property>
-    <attribute name="horizontalHeaderVisible">
-     <bool>true</bool>
-    </attribute>
-    <attribute name="horizontalHeaderCascadingSectionResizes">
-     <bool>true</bool>
-    </attribute>
-    <attribute name="verticalHeaderCascadingSectionResizes">
-     <bool>true</bool>
-    </attribute>
-    <row>
-     <property name="text">
-      <string>A</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>B</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>C</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>D</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>E</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>F</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>G</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>H</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>I</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>J</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>K</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>L</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>M</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>N</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>O</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>P</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>Q</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>R</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>S</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>T</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>U</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>V</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>W</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>X</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>Y</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>Z</string>
-     </property>
-    </row>
-    <column>
-     <property name="text">
-      <string>A</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>B</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>C</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>D</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>E</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>F</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>G</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>H</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>I</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>J</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>K</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>L</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>M</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>N</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>O</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>P</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Q</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>R</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>S</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>T</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>U</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>V</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>W</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>X</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Y</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Z</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="tryButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PButton</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>300</y>
-      <width>671</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>INPUT</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item row="0" column="1" colspan="2">
+         <widget class="QLabel" name="InputTableLabelHeader">
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="text">
+           <string>Input</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QTableWidget" name="InputTable"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="OutPutGroup">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Output Type</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="EmigrationButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Emigration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="ImmigrationButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Immigration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="MateButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Mate</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="ModulesButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Modules</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="MortalityButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Mortality</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="OffspringButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>OffSpring</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="PreProcessButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>PreProcess</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QPushButton" name="PostProcessButton">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>PostProcess</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="InputTableGroup">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="ColumnsLabel">
+             <property name="text">
+              <string>Columns:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="ColumnsSpinBox"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="RowsLabel">
+             <property name="text">
+              <string>Rows:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="RowsSpinBox">
+             <property name="value">
+              <number>99</number>
+             </property>
+             <property name="displayIntegerBase">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ResizeButton">
+             <property name="text">
+              <string>Resize</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ClearInputButton">
+             <property name="text">
+              <string>Clear Table</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ImportCSVButton">
+             <property name="text">
+              <string>Import CSV</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>OUTPUT</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTableWidget" name="OutputTable">
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustIgnored</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>A</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>B</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>C</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>D</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>E</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>F</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>G</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>H</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>I</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>J</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>K</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>L</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>M</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>N</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>O</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>P</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Q</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>R</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>S</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>U</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>V</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>W</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>X</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Y</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Z</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>A</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>B</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>C</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>D</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>E</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>F</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>G</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>H</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>I</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>J</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>K</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>L</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>M</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>N</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>O</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>P</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Q</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>R</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>S</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>T</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>U</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>V</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>W</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>X</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Y</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Z</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>803</width>
+     <width>1207</width>
      <height>21</height>
     </rect>
    </property>
@@ -355,6 +550,7 @@
     <addaction name="actionNew"/>
     <addaction name="actionOpen"/>
     <addaction name="actionRecent"/>
+    <addaction name="actionImport"/>
     <addaction name="separator"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_As"/>
@@ -369,8 +565,8 @@
     </property>
     <addaction name="actionFullScreen"/>
     <addaction name="actionSplitScreen"/>
-    <addaction name="actionInput"/>
-    <addaction name="actionOutput"/>
+    <addaction name="actionInput_Pop_Out"/>
+    <addaction name="actionOutput_Pop_Out"/>
     <addaction name="actionGraph"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
@@ -391,6 +587,10 @@
     <addaction name="separator"/>
     <addaction name="actionUndo"/>
     <addaction name="actionRedo"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionClear"/>
+    <addaction name="actionClear_Output"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
@@ -405,10 +605,16 @@
     <addaction name="actionCDMetaPop_About"/>
     <addaction name="actionFrequently_Asked_Questions"/>
    </widget>
+   <widget class="QMenu" name="menuOutput">
+    <property name="title">
+     <string>Output</string>
+    </property>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuView"/>
    <addaction name="menuSettings"/>
+   <addaction name="menuOutput"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -522,7 +728,123 @@
     <string>New</string>
    </property>
   </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear Input</string>
+   </property>
+  </action>
+  <action name="actionClear_Output">
+   <property name="text">
+    <string>Clear Output</string>
+   </property>
+  </action>
+  <action name="actionInput_Pop_Out">
+   <property name="text">
+    <string>Input (Pop Out)</string>
+   </property>
+  </action>
+  <action name="actionOutput_Pop_Out">
+   <property name="text">
+    <string>Output (Pop Out)</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>638</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_Output</sender>
+   <signal>triggered()</signal>
+   <receiver>OutputTable</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>663</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear</sender>
+   <signal>triggered()</signal>
+   <receiver>InputTable</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ClearInputButton</sender>
+   <signal>clicked()</signal>
+   <receiver>InputTable</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>697</x>
+     <y>462</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFullScreen</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>638</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
