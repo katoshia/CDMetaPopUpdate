@@ -11,6 +11,7 @@ import csv
 
 From_Main, _= loadUiType(join(dirname(__file__), "CDMetaPop.ui"))
 
+
 class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
@@ -18,6 +19,7 @@ class UI(QMainWindow):
 
         # load the ui file
         uic.loadUi("CDMetaPop.ui", self)
+        
         # show the app
 
         # define our widgets
@@ -44,6 +46,10 @@ class UI(QMainWindow):
         self.PreProcessButton = self.findChild(QPushButton, "PreProcessButton")
         self.PostProcessButton = self.findChild(QPushButton, "PostProcessButton")
 
+        self.RowValue.valueChanged.connect(self.changeTableRows)
+        self.ColumnValue.valueChanged.connect(self.changeTableColumns)
+
+
         # self.ResizeButton.clicked.connect(self.tableResize)
         self.importButton.clicked.connect(self.openImportFile)
         #self.tryButllton.clicked.connect(self.openOutputFile)
@@ -51,13 +57,14 @@ class UI(QMainWindow):
         # Show the app
         self.show()
 
-    def tableResize(self):
-        numColumn=self.ColumnValue.value()
-        self.ColumnValue.setValue(numColumn)
-        self.InputTable.setColumnCount(numColumn)
-        numRows=self.RowValue.value()
-        self.RowValue.setValue(numRows)
-        self.InputTable.setRowCount(numRows)
+    # adds rows to empty table ok and decreases size - need to reset spinboxes to counts of imports also need to protect data after importing if resize needs to happen.
+    def changeTableColumns(self):
+        columns=self.ColumnValue.value()
+        self.InputTable.setColumnCount(columns)
+    def changeTableRows(self):
+        rows = self.RowValue.value()
+        self.InputTable.setRowCount(rows)
+        # numColumn=self.ColumnValue.value()
 
     # tried below - NEEDS CORRECTING FOR COLUMN HEADERS. - CORRECTED
     def openImportFile(self):
