@@ -1,5 +1,5 @@
 # imports for qtapplications and widegets
-from PyQt5.QtWidgets import QSpinBox, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget, QFrame
+from PyQt5.QtWidgets import QLabel, QGroupBox, QSpinBox, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget, QFrame
 from PyQt5 import uic
 from PyQt5.uic import loadUiType
 from os.path import dirname, join
@@ -22,14 +22,20 @@ class SplashUI(QMainWindow):
         # show the app
 
         # define our widgets
-        self.PicOne = self.findChild(QFrame, "picFrameOne")
+        self.labelA=self.findChild(QLabel, "label")
+        self.labelA=self.findChild(QLabel, "label_2")
+        self.labelA=self.findChild(QLabel, "label_3")
+        self.labelA=self.findChild(QLabel, "label_4")
+        self.GroupBox=self.findChild(QGroupBox, "groupBox")
+
         self.StartButton = self.findChild(QPushButton, "startButton")
         self.show()
-        
+
         self.StartButton.clicked.connect(self.Start_Button_Clicked)
         self.dialog = UI(self)
 
     def Start_Button_Clicked(self):
+        
         self.dialog.show()
 
 class UI(QMainWindow):
