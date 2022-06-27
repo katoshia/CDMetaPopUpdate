@@ -1,5 +1,5 @@
 # imports for qtapplications and widegets
-from PyQt5.QtWidgets import QSpinBox, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget
+from PyQt5.QtWidgets import QSpinBox, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget, QFrame
 from PyQt5 import uic
 from PyQt5.uic import loadUiType
 from os.path import dirname, join
@@ -8,13 +8,33 @@ import os
 import csv
 
 
-From_Main, _= loadUiType(join(dirname(__file__), "UpdatedCDMetaPOP.ui"))
+From_Main, _= loadUiType(join(dirname(__file__), "SplashPage.ui"))
 
-os.getcwd()
+class SplashUI(QMainWindow):
+    def __init__(self, parent=None):
+        super(SplashUI, self).__init__(parent)
+        QWidget.__init__(self)
+
+        # load the ui file
+        uic.loadUi(join(dirname(__file__), "SplashPage.ui"), self)
+
+        # uic.loadUi("SplashPage.ui", self)
+        # show the app
+
+        # define our widgets
+        self.PicOne = self.findChild(QFrame, "picFrameOne")
+        self.StartButton = self.findChild(QPushButton, "startButton")
+        self.show()
+        
+        self.StartButton.clicked.connect(self.Start_Button_Clicked)
+        self.dialog = UI(self)
+
+    def Start_Button_Clicked(self):
+        self.dialog.show()
 
 class UI(QMainWindow):
-    def __init__(self):
-        super(UI, self).__init__()
+    def __init__(self, parent=None):
+        super(UI, self).__init__(parent)
         QWidget.__init__(self)
 
         # load the ui file
@@ -52,7 +72,7 @@ class UI(QMainWindow):
         self.importButton.clicked.connect(self.openImportFile)
 
         # Show the app
-        self.show()
+        #self.show()
 
     # adds rows/columns to empty table ok and decreases size - need to reset spinboxes to counts of imports also need to protect data after importing if resize needs to happen.
     def changeTableColumns(self):
@@ -109,5 +129,5 @@ class UI(QMainWindow):
 # initialize the app
 
 app = QApplication(sys.argv)
-UIWindow = UI()
+UIWindow = SplashUI()
 app.exec_()

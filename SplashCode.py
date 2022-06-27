@@ -26,6 +26,7 @@ class UI(QMainWindow):
 
         self.show()
 
+
 # initialize the app
 
 app = QApplication(sys.argv)
