@@ -1,16 +1,16 @@
 # imports for qtapplications and widegets
-import fileinput
 from PyQt5.QtWidgets import QSpinBox, QMainWindow, QApplication, QFileDialog, QTableWidget, QTableWidgetItem, QPushButton, QWidget
 from PyQt5 import uic
 from PyQt5.uic import loadUiType
 from os.path import dirname, join
 import sys
 import os
-import pandas as pd
 import csv
+
 
 From_Main, _= loadUiType(join(dirname(__file__), "UpdatedCDMetaPOP.ui"))
 
+os.getcwd()
 
 class UI(QMainWindow):
     def __init__(self):
@@ -18,7 +18,7 @@ class UI(QMainWindow):
         QWidget.__init__(self)
 
         # load the ui file
-        uic.loadUi("UpdatedCDMetaPOP.ui", self)
+        uic.loadUi(join(dirname(__file__), "UpdatedCDMetaPOP.ui"), self)
         
         # show the app
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>SplashMainWindow</class>
+ <widget class="QMainWindow" name="SplashMainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,17 +17,17 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>119</x>
-      <y>119</y>
+      <x>10</x>
+      <y>10</y>
       <width>671</width>
       <height>441</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="startButton">
        <property name="text">
-        <string>PushButton</string>
+        <string>Start </string>
        </property>
       </widget>
      </item>
@@ -36,10 +36,10 @@
    <widget class="QFrame" name="picFrameOne">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>689</x>
       <y>10</y>
-      <width>120</width>
-      <height>80</height>
+      <width>101</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="frameShape">

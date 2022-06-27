@@ -15,7 +15,9 @@ class UI(QMainWindow):
         QWidget.__init__(self)
 
         # load the ui file
-        uic.loadUi("SplashPage.ui", self)
+        uic.loadUi(join(dirname(__file__), "SplashPage.ui"), self)
+
+        # uic.loadUi("SplashPage.ui", self)
         # show the app
 
         # define our widgets
